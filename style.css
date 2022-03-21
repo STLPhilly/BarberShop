@@ -1,187 +1,262 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
-
-/* font-family: 'Raleway', sans-serif; */
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-/*Header bar*/
-#navigation {
-	width: 100%;
-	padding: 25px 0;
-	position: absolute;
-	top: 0;
-	z-index: 156;
-	border-bottom: 1px solid #ffffff2e;
+/* Scroll bars */
+html::-webkit-scrollbar {
+  height: 0.5vw; /* height of horizontal scrollbar */
+  width: 0.5vw;
+  border: 1px solid #d5d5d5;
+}
 
+html::-webkit-scrollbar-thumb {
+  background-color: #7775;
+  border-radius: 26px;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: #5555;
+}
+
+.disable-scrollbars::-webkit-scrollbar {
+  background: transparent; /* Chrome/Safari/Webkit */
+  width: 0px;
+  height: 0px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  overflow: hidden;
+  scrollbar-track-color: transparent;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  display: none;
+}
+
+.disable-scrollbars {
+  background: transparent;
+  display: none;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  overflow: hidden;
+  scrollbar-track-color: transparent;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+#Calender {
+  overflow: -moz-scrollbars-none;
+  background: transparent;
+  display: none;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  overflow: hidden;
+  scrollbar-track-color: transparent;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+/* Top-Bottom Scroll Buttons */
+#ScrollButton {
+  position: fixed;
+  right: 10px;
+  border: none;
+  background-image: url("Arrow.png");
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0);
+  background-size: 2vw;
+  padding: 2vw;
+  font-size: 0px;
+  color: #000;
+}
+
+.Rotation {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/*Navigation bar separator*/
+#navigation {
+  width: 100%;
+  padding: 0px 0;
+  position: absolute;
+  top: 0;
+  z-index: 156;
+  border-bottom: 2px solid #ffffff7e;
+  background-color: rgba(0, 0, 0, 0.452);
 }
 
 /*Logo Location*/
 #navigation .grid {
-	width: 90%;
-	margin: 0 auto;
-	text-align: left;
+  width: 90%;
+  margin: 0 auto;
+  text-align: left;
 }
 
 /*Logo text*/
 #navigation .grid h4 {
-	color: #fff;
-	font-size: 30px;
-	font-family: 'Raleway', sans-serif;
-	font-weight: 200;
-	letter-spacing: 2px;
+  color: #fff;
+  font-size: 30px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  letter-spacing: 2px;
 }
 
+/* Nav Bar*/
+
 #navigation .grid h4 span {
-	font-weight: 700;
+  font-weight: 700;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 10px;
+  padding-top: 10px;
+}
+
+nav a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: rgb(255, 255, 255);
+  font-weight: 900;
 }
 
 /*Background*/
 #header {
-	min-height: 100vh;
-	width: 100%;
-	background-image: url('barberBG.jpg');
-	background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	background-size: cover;
-	display: flex;
-	justify-content: center;
-	-ms-align-items: center;
-	align-items: center;
-	position: relative;
-	background-attachment: fixed;
+  min-height: 90vh;
+  width: 100%;
+  background-image: url("barberBG.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  position: relative;
+  background-attachment: fixed;
 }
 
 /*Overlay*/
 #header .overlay {
-	width: 100%;
-	min-height: 100%;
-	background-color: #1126518f;
-	position: absolute;
+  width: 100%;
+  min-height: 100%;
+  background-color: #1126518f;
+  position: absolute;
 }
 
-/*NavBar 1*/
-#header .content {
-	z-index: 15;
-	text-align: center;
+/* Barber Name */
+#header .button {
+  z-index: 15;
+  text-align: center;
 }
 
-#header  .content h1 {
-	font-size: 45px;
-	font-family: 'Raleway', sans-serif;
-	text-align: center;
-	text-transform: uppercase;
-	letter-spacing: 10px;
-	color: white;
-	font-weight: 900;
-	margin-bottom: 50px;
+#header .button h1 {
+  font-size: 45px;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  color: white;
+  font-weight: 900;
+  margin-bottom: 50px;
 }
-
 
 /* Button */
-#header .content a {
-	color: black;
-	text-align: center;
-	width: 150px;
-	height: 50px;
-	line-height: 50px;
-	background: white;
-	display: inline-block;
-	text-decoration: none;
-	font-size: 14px;
-	font-family: 'Raleway', sans-serif;
-	border-radius: 50px;
-	border: 1px solid white;
-	-webkit-transition: all .5s;
-	-moz-transition: all .5s;
-	-ms-transition: all .5s;
-	-o-transition: all .5s;
-	transition: all .5s;
+#header .button a {
+  color: rgb(14, 14, 14);
+  text-align: center;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  background: white;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  border-radius: 50px;
+  border: 1px solid white;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-#header .content a:hover {
-	background-color: black;
-	color: white;
+#header .button a:hover {
+  background-color: black;
+  color: white;
 }
 
 /* About */
-
 #about {
-	width: 100%;
-	min-height: 100vh;
-	padding: 50px 0;
-	text-align: center;
-	color: white;
-	background-color: black;
+  width: 100%;
+  height: 95%;
+  min-height: 100vh;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  background-color: black;
 }
 
-#about h1, h2, h3{
-	font-size: 3rem;
-	font-family: 'Raleway', sans-serif;
-	margin-bottom: 25px;
-	text-transform: uppercase;
-	letter-spacing: 2px;
+/* Title */
+#about h1,
+h2,
+h3 {
+  font-size: 3rem;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-article.about{
-	text-align: center;
-	margin-top: 100px;
-	margin-left: 200px;
-	margin-right: 200px;
-	font-size: 25px;
+/* Paragraph */
+article.about {
+  text-align: center;
+  margin-top: 100px;
+  margin-left: 200px;
+  margin-right: 200px;
+  font-size: 25px;
+}
+
+/* Services */
+.Services li {
+  font-size: 25px;
+  font-weight: 700;
+  list-style-type: none;
 }
 
 /* Footer Area */
 
 #footer {
-	margin: 0 auto;
-	color: #000;
-	padding: 25px 0;
-	text-align: center; 
-	font-family: 'Raleway', sans-serif;
-	font-size: 12px;
-	letter-spacing: 1.5px;
-	font-weight: 400;
-}
-
-
-/* Nav Bar 2*/
-nav{
-    float: right;
-
-}
-
-nav ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    font-weight: 700;
-}
-
-nav li{
-	
-    display: inline-block;
-    margin-left: 10px;
-    padding-top: 10px;
-}
-
-nav a{
-    color: rgb(211, 155, 0);
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 14px;
-}
-
-nav a:hover{
-    color: rgb(255, 174, 0);
-    font-weight: 900;
-}
-
-/* Services */
-.Services li{
-	font-size: 25px;
-	font-weight: 700;
+  margin: 0 auto;
+  color: rgb(17, 17, 17);
+  padding: 15px 0;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  font-weight: 400;
 }

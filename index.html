@@ -7,10 +7,22 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<!-- Font Awesome CSS -->
 	<link rel="stylesheet" type="text/css" href="css/all.css">
-	<link rel="stylesheet" href="Slide.css">
+	<link rel="stylesheet" type="text/css" href="Slide.css">
 </head>
 
 <body>
+
+	
+			<!--Return to top location-->
+			<div>
+				<a name="top"></a>
+			</div>
+
+			<!--Scroll to top button-->
+			<div>
+			<a href="#bottom"><button id="ScrollButton" class="Rotation" style="bottom: 10px; right:30px; z-index:1;">Bottom</button></a>
+			</div>
+
 	<!-- Logo -->
 	<div id="header">
 		<div id="navigation">
@@ -20,102 +32,48 @@
 				<nav>
                     <ul>
                         <li><a class='active' href="index.html">Home</a></li>
-                        <li><a href="pages/About.html">About</a></li>
                         <li><a href="pages/Services.html">Services</a></li>
-                        <li><a href="pages/Contact.html">Contact</a></li>
-                        <li><a href="pages/FAQ.html">FAQ</a></li>
+						<li><a href="pages/Gallery.html">Gallery</a></li>
                     </ul>
                 </nav>
 			</div>
 		</div>
+
 		<!-- Main Body & Button-->
 		<div class="overlay"></div>
-		<div class="content">
+		<div class="button">
 			<h1>PhillyZ</h1>
-			<a href="#">Book Now!</a>
+			<a href="pages/Services.html">Book Now!</a>
 		</div>
 	</div>
 
 	<!-- About Section-->
 	<div id="about">
-		<h2>Home</h2>
-		<br>
-		<br>
-		<br>
 
-		<div id="Slider">
-			<section class="carousel" aria-label="Gallery">
-				<ol class="carousel__viewport">
-				<li id="carousel__slide1"
-					tabindex="0"
-					class="carousel__slide">
-					<img src="barber.jpg" width="560" height="512"></img>
-					<div class="carousel__snapper">
-					<a href="#carousel__slide4"
-						class="carousel__prev">Go to last slide</a>
-					<a href="#carousel__slide2"
-						class="carousel__next">Go to next slide</a>
-					</div>
-				</li>
-				<li id="carousel__slide2"
-					tabindex="0"
-					class="carousel__slide">
-					<img src="barber2.jpg" width="560" height="512"></img>
-					<div class="carousel__snapper"></div>
-					<a href="#carousel__slide1"
-					class="carousel__prev">Go to previous slide</a>
-					<a href="#carousel__slide3"
-					class="carousel__next">Go to next slide</a>
-				</li>
-				<li id="carousel__slide3"
-					tabindex="0"
-					class="carousel__slide">
-					<img src="barber3.jpg" width="560" height="512"></img>
-					<div class="carousel__snapper"></div>
-					<a href="#carousel__slide2"
-					class="carousel__prev">Go to previous slide</a>
-					<a href="#carousel__slide4"
-					class="carousel__next">Go to next slide</a>
-				</li>
-				<li id="carousel__slide4"
-					tabindex="0"
-					class="carousel__slide">
-					<img src="barber4.jpg" width="560" height="512"></img>
-					<div class="carousel__snapper"></div>
-					<a href="#carousel__slide3"
-					class="carousel__prev">Go to previous slide</a>
-					<a href="#carousel__slide1"
-					class="carousel__next">Go to first slide</a>
-				</li>
-				</ol>
-				<aside class="carousel__navigation">
-				<ol class="carousel__navigation-list">
-					<li class="carousel__navigation-item">
-					<a href="#carousel__slide1"
-						class="carousel__navigation-button">Go to slide 1</a>
-					</li>
-					<li class="carousel__navigation-item">
-					<a href="#carousel__slide2"
-						class="carousel__navigation-button">Go to slide 2</a>
-					</li>
-					<li class="carousel__navigation-item">
-					<a href="#carousel__slide3"
-						class="carousel__navigation-button">Go to slide 3</a>
-					</li>
-					<li class="carousel__navigation-item">
-					<a href="#carousel__slide4"
-						class="carousel__navigation-button">Go to slide 4</a>
-					</li>
-				</ol>
-				</aside>
-			</section>
+			<h1>About</h1>
+				<article class="about">
+					A talented barber with over a decade's worth of experience.<br>
+					Doing undercuts, styling, long hair or short, but specializing in fades.<br>
+					Starting out in Philadelphia, he has done hair and traveled across the east coast, and finally chosen to settle down in the mid-west.<br><br>
+					Outside of barbering he does construction, web-design, and even minor mechanics.<br>
+					A short 6 month sprint with LaunchCode101 set up his knowledge-base to include Java, JavaScript, HTML/CSS, and more. During which he was able to make this web-site! <br><br>
+				</article>
 		</div>
-	</div>
 	
+		<!--Scroll to top button-->
+		<div>
+			<a href="#top"><button id="ScrollButton" style="top:70px; right: 0px;">Top</button></a>
+		</div>
+
+		<!--To bottom location-->
+		<div>
+			<a name="bottom"></a>
+		</div>
 	
 	<!-- Footer -->
 	<div id="footer">
 		<p>BarberShop - 2021 &copy;</p>
 	</div>
+
 </body>
 </html>
